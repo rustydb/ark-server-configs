@@ -37,4 +37,4 @@ if [ ! -d "$DEST" ]; then
    exit 1
 fi
 
-rsync -rlptDv "$SOURCE/" "$DEST/"
+rsync -rlogptDv "$SOURCE/" "$DEST/"
