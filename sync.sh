@@ -37,4 +37,4 @@ if [ ! -d "$DEST" ]; then
    exit 1
 fi
 
-rsync -rlogptDv "$SOURCE/" "$DEST/"
+rsync -rltDv --no-owner --no-group --no-p "$SOURCE/" "$DEST/"
