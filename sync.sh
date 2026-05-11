@@ -1,6 +1,5 @@
 #!/bin/bash
 # sync.sh - ARK Server Configuration Sync Tool
-# Ensures server configurations are synchronized with root privileges.
 
 set -euo pipefail
 
@@ -27,13 +26,13 @@ if [ -z "$SOURCE" ] || [ -z "$SERVER" ]; then
 fi
 
 if [ ! -d "$SOURCE" ]; then
-   echo "Error: Source directory '$SOURCE' does not exist." >&2
+   echo "Error: Source directory does not exist: $SOURCE" >&2
    exit 1
 fi
 
 DEST="/mnt/.ix-apps/app_mounts/${SERVER}/ark-server"
 if [ ! -d "$DEST" ]; then
-   echo "Error: Server directory '$DEST' does not exist." >&2
+   echo "Error: Server directory does not exist: $DEST" >&2
    exit 1
 fi
 
