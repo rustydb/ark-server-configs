@@ -30,7 +30,7 @@ if [ ! -d "$SOURCE" ]; then
    exit 1
 fi
 
-DEST="/mnt/.ix-apps/app_mounts/${SERVER}/ark-server"
+DEST="/mnt/.ix-apps/app_mounts/${SERVER}/${SERVER}"
 if [ ! -d "$DEST" ]; then
    echo "Error: Server directory does not exist: $DEST" >&2
    exit 1
